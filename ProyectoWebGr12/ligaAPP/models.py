@@ -23,3 +23,4 @@ class Jugador(models.Model):
     posicion = models.CharField(max_length=50)
     añoDeUnion = models.DateField()
     fechaNacimiento = models.DateField()
+    equipo = models.ForeignKey(Liga, related_name = 'jugadores', on_delete=models.CASCADE)
